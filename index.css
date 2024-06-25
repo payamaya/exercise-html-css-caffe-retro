@@ -1,0 +1,51 @@
+body {
+  /* font-family: "Poiret One", sans-serif;
+font-family: "Spirax", sans-serif; */
+}
+
+section {
+  background-image: image-set('/asstes/hot.jpg');
+  display: flex;
+  flex-direction: column;
+  h1 {
+    color: #8d0001;
+    align-self: center;
+    padding-top: 48px;
+    font-size: 72px;
+    font-family: 'Spirax', sans-serif;
+  }
+}
+.para_wrapper {
+  margin-inline: 80px;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+.para_wrapper > p {
+  font-family: 'Poiret One', sans-serif;
+  padding: 16px;
+  color: #d0b4b4;
+  background-color: #710305dc;
+  align-self: flex-start;
+  &:last-child {
+    align-self: flex-end;
+  }
+}
+
+article {
+  font-family: 'Spirax', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: #111111;
+  color: #c5c5c5;
+  h3 {
+    font-family: 'Poiret One', sans-serif;
+  }
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
