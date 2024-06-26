@@ -1,15 +1,10 @@
 :root {
-  --main-bg-color: #cd8000;
-  --main-text-color: aliceblue;
-  --nav-bg-color: #a44801;
-  --nav-hover-color: #c3ab00;
-  --header-bg-color: #333;
-  --header-text-color: #fff;
-  --footer-bg-color: #a44801;
-  --footer-text-color: #fff;
-  --padding-small: 10px;
-  --padding-large: 20px;
-  --font-family: Arial, sans-serif;
+  --nav-bg-color: hwb(324 2% 92% / 0.8);
+  --list-bg-color: rgba(17, 17, 17, 0.8);
+  --title-color: #8d0001;
+  --text-color: #c5c5c5;
+  --font-Poiret: 'Poiret One', sans-serif;
+  --font-Spirax: 'Spirax', sans-serif;
 }
 /* Basic reset */
 * {
@@ -26,82 +21,126 @@ font-family: "Spirax", sans-serif; */
   padding: 0;
   background: #f4f4f4;
 }
-nav {
+header {
   display: flex;
   position: fixed;
   justify-content: space-evenly;
   width: 100%;
-  padding-top: 20px;
-  background-color: hwb(324 2% 92% / 0.8);
-  color: #c5c5c5;
-  align-items: center;
-  align-content: center;
+  background-color: var(--nav-bg-color);
+  color: var(--text-color);
+  height: 40px;
+  margin-top: 8px;
+}
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 4rem;
+  padding-block: 2px;
+  overflow: hidden;
+  align-items: flex-end;
   a {
     text-decoration: none;
-    color: #c5c5c5;
-    font-size: 36px;
-    font-family: 'Spirax', sans-serif;
+    color: var(--text-color);
+    font-size: 32px;
+    font-family: var(--font-Spirax);
   }
 }
-section {
+.container-hot {
   background-image: url('/asstes/hot.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  /* height: 100vh; */
+  align-items: center;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  h1 {
-    margin-left: 8rem;
-    color: #8d0001;
-    align-self: center;
-    padding-top: 64px;
-    margin-top: 4rem;
-    font-size: 96px;
-    font-family: 'Spirax', sans-serif;
-  }
+  zoom: 1.2;
 }
-.para_wrapper {
-  margin-inline: 80px;
+.container-juicy {
+  background-image: url('/asstes/juicy.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.container-cosy {
+  background-image: url('/asstes/cosy.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.container-title {
+  color: var(--title-color);
+  align-self: center;
+  margin-top: 4rem;
+  font-size: 84px;
+  font-weight: 900;
+  font-family: var(--font-Spirax);
+}
+.container-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  align-items: center;
+}
+.para-container {
+  margin-inline: 2rem;
   display: flex;
   align-content: center;
   flex-direction: column;
   align-items: center;
+  min-width: 100%;
 }
-.para_wrapper p {
-  font-size: 20px;
-  font-family: 'Poiret One', sans-serif;
+.para-container p {
+  font-family: var(--font-Poiret);
   padding: 11px;
-  color: #d0b4b4;
+  color: #ffe9e9;
   background-color: rgb(126, 17, 19, 0.9);
-  width: fit-content;
+  width: 600px;
+  display: flex;
+  justify-content: center;
   padding-inline: 2rem;
-
   align-self: self-start;
   &:last-child {
     align-self: self-end;
 
-    margin-block: 2rem;
+    margin-block: 1rem;
   }
 }
 
-article {
-  font-family: 'Spirax', sans-serif;
+.list-container {
+  width: 600px;
+  padding: 1rem 2rem;
+  font-family: var(--font-Spirax);
+  background: var(--list-bg-color);
+  color: var(--text-color);
+}
+
+.list-container li {
+  list-style: none;
+  height: 20px;
+}
+
+.article {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  padding-inline: 2rem;
-  background: rgb(17, 17, 17, 0.8);
-  color: #c5c5c5;
-  h3 {
-    font-family: 'Poiret One', sans-serif;
-  }
 }
 
-ul {
-  margin-inline: 8rem;
-  li {
-    list-style: none;
-  }
+.article-head {
+  font-family: var(--font-Poiret);
+}
+.horizontal {
+  background-color: var(--title-color);
+  height: 20px;
 }
