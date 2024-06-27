@@ -29,16 +29,16 @@ font-family: "Spirax", sans-serif; */
   justify-content: space-evenly;
   width: 100%;
   color: var(--text-color);
-  /* margin-top: 2rem; */
-  top: 2rem;
-  /* height: 8vh; */
+  background-color: var(--nav-bg-color);
+  /* top: 2rem; */
+  align-items: center;
+  height: 10vh;
 }
 .nav {
   display: flex;
-  width: 100%;
+  /* min-width: 100%; */
   justify-content: center;
-  gap: 10rem;
-  background-color: var(--nav-bg-color);
+  gap: 8rem;
   overflow: hidden;
   position: absolute;
   /* align-items: flex-start; */
@@ -52,10 +52,10 @@ font-family: "Spirax", sans-serif; */
 .nav a {
   text-decoration: none;
   color: var(--text-color);
-  font-size: 48px;
+  font-size: clamp(24px, 3vw, 48px);
   font-family: var(--font-Spirax);
   position: relative;
-  top: -20px;
+  /* top: -20px; */
 }
 
 .container-hot {
@@ -72,7 +72,6 @@ font-family: "Spirax", sans-serif; */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /* width: 100%; */
   align-items: center;
   height: 100vh;
   display: flex;
@@ -85,65 +84,45 @@ font-family: "Spirax", sans-serif; */
   font-size: 8rem;
   font-weight: 900;
   font-family: var(--font-Spirax);
-  margin-top: 5.5rem;
-  /* padding-right: 3rem; */
+  margin-top: 3.5rem;
 }
-/* .cosy-title {
-  color: var(--title-color);
-  align-self: center;
-  font-size: 152px;
-  font-weight: 900;
-  font-family: var(--font-Spirax);
-  padding-right: 0rem;
-} */
+
 .container-wrapper {
   display: flex;
   flex-direction: column;
-  /* width: 700px; */
   align-items: center;
   margin-top: 13rem;
-  /* padding-left: 0.8rem; */
+  width: 100%;
 }
-/* .cosy-wrapper {
-  display: flex;
-  align-items: center;
-  margin-top: 16.5rem;
-} */
+
 .para-container {
-  /* border: 2px solid green; */
   margin-inline: 2rem;
   display: flex;
   align-content: center;
   flex-direction: column;
   align-items: center;
-  /* min-width: max-content; */
-  width: 1120px;
+  width: 1020px;
   margin-top: 0.3rem;
 }
 .para-container p {
   display: flex;
-  font-size: 32px;
-  min-width: 888px;
-  font-family: var(--font-Poiret);
-  /* padding: 11px; */
-  padding-inline: 3rem;
-  /* padding-top: 1rem; */
-  padding-block: 1rem;
-  color: #ffe9e9;
-  background-color: rgb(126, 17, 19, 0.9);
-  /* width: 450px; */
-  /* width: 100%; */
-  /* display: flex; */
-  /* padding-inline: 1rem; */
-  margin-block: 0.6rem 2rem;
   align-self: self-start;
   align-items: center;
   justify-content: center;
   align-content: flex-end;
   flex-direction: column-reverse;
+  padding-inline: 3rem;
+  padding-block: 1rem;
+  font-size: 28px;
+  font-family: var(--font-Poiret);
+  color: #ffe9e9;
+  background-color: rgb(126, 17, 19, 0.9);
+  width: 820px;
+  margin-block: 0.6rem 2rem;
 }
 .para-container :last-child {
   align-self: self-end;
+  width: 800px;
 }
 
 .list-container {
@@ -153,16 +132,14 @@ font-family: "Spirax", sans-serif; */
   padding: 1.2rem 4rem;
   font-family: var(--font-Poiret);
   background: var(--list-bg-color);
-  margin-top: 0.8rem;
-  min-width: 888px;
+  /* margin-top: 0.8rem; */
+  width: 800px;
   height: fit-content;
-  /* height: 150px; */
   color: var(--text-color);
 }
 
 .list-container li {
   list-style: none;
-  /* height: 22px; */
   font-size: 18px;
   color: var(--lis-color);
 }
@@ -170,6 +147,7 @@ font-family: "Spirax", sans-serif; */
 .article {
   display: flex;
   justify-content: space-between;
+  font-weight: 600;
 }
 
 .article-head {
@@ -178,4 +156,55 @@ font-family: "Spirax", sans-serif; */
 .horizontal {
   background-color: var(--title-color);
   height: 20px;
+}
+
+@media (max-width: 950px) {
+  .para-container {
+    margin-inline: 1rem;
+    width: 100%;
+  }
+  .para-container p {
+    text-align: center;
+    padding-inline: 0.8rem;
+    font-size: 19px;
+    width: 600px;
+    margin-inline: 2rem;
+
+    align-items: center;
+  }
+  .para-container :last-child {
+    display: none;
+  }
+  .list-container {
+    width: 85%;
+    margin-top: 0.3rem;
+    /* width: 600px; */
+    padding: 0.5rem 1rem;
+  }
+  .list-container li {
+    font-size: 16px;
+    max-width: 100%;
+  }
+  .container-title {
+    color: var(--title-color);
+    align-self: center;
+    font-size: 4rem;
+    font-weight: 900;
+    font-family: var(--font-Spirax);
+    margin-top: 5.5rem;
+  }
+  .para-container {
+    margin-inline: 5rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .nav .header {
+    width: 100%;
+  }
+  .nav {
+    gap: 2rem;
+    /* height: 6vh; */
+  }
 }
