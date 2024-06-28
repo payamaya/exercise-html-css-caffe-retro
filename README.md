@@ -3,6 +3,8 @@
 ## Description
 You are contacted by the advertising agency SkissaMera, who has produced a sketch of a website for a client – a cafe called Caffe Retro.
 
+![screenshot](https://raw.githubusercontent.com/Lexicon-LTU-2024/exercise-html-css-caffe-retro/main/assets/screenshot.png)
+
 ## Sketch
 The sketch is in the form of a video, "Caffe Retro sketch," and it shows a website consisting of a web page divided into three sections (Hot, Juicy, and Cosy). Watch carefully, pausing to see details as you work.
 
