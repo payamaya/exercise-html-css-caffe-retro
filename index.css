@@ -1,7 +1,7 @@
 :root {
   --nav-bg-color: hwb(324 2% 92% / 0.8);
   --list-bg-color: rgba(17, 17, 17, 0.85);
-  --lis-color: #b8b8b8;
+  --list-color: #b8b8b8;
   --title-color: #8d0001;
   --text-color: #c5c5c5;
   --font-Poiret: 'Poiret One', sans-serif;
@@ -18,11 +18,14 @@ html {
 }
 body {
   line-height: 1.6;
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
   background: #f4f4f4;
   font-family: var(--font-Poiret);
 }
+/* [class*='para'] {
+  background: yellow;
+} */
 .header {
   display: flex;
   flex-wrap: wrap;
@@ -67,6 +70,9 @@ body {
   /* zoom: 1.4; */
 }
 .container-title {
+  /* 
+  --title-color: green;  local variable will override global 
+  */
   color: var(--title-color);
   align-self: center;
   font-size: 8rem;
@@ -103,8 +109,9 @@ body {
   margin-block: 0.6rem 1rem;
   right: 6rem;
 }
+
 .para-container :last-child {
-  width: 750px;
+  width: 760px;
   left: 4rem;
 }
 
@@ -138,16 +145,29 @@ body {
 }
 
 @media (max-width: 950px) {
+  .nav .header {
+    width: 100%;
+  }
+  .nav {
+    gap: 2rem;
+  }
   .para-container {
-    margin-inline: 1rem;
+    /* margin-inline: 5rem; */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .para-container {
+    /* margin-inline: 1rem; */
     width: 100%;
   }
   .para-container p {
     text-align: center;
     padding-inline: 0.8rem;
     font-size: 19px;
-    width: 600px;
-    margin-inline: 2rem;
+    width: 80%;
+    /* margin-inline: 2rem; */
 
     align-items: center;
   }
@@ -155,7 +175,7 @@ body {
     display: none;
   }
   .list-container {
-    width: 85%;
+    width: 80%;
     margin-top: 0.3rem;
     padding: 0.5rem 1rem;
     padding-bottom: 1rem;
@@ -171,22 +191,25 @@ body {
     font-size: 4rem;
     margin-top: 6rem;
   }
-  .para-container {
-    margin-inline: 5rem;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .nav .header {
+  .container-wrapper {
+    /* margin-top: 0.2rem; */
     width: 100%;
   }
-  .nav {
-    gap: 2rem;
+  .para-container p {
+    position: unset;
+    font-size: medium;
   }
 }
 @media (max-width: 450px) {
   .container-wrapper {
-    margin-top: 4rem;
+    /* margin-top: 0.2rem; */
+    width: 100%;
+  }
+  .para-container p {
+    position: unset;
+  }
+  .article {
+    font-size: 16px;
   }
 }
